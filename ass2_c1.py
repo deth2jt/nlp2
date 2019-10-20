@@ -160,8 +160,20 @@ def generateFile(fileName, transistionDict,emissionDict, tagUnigram):
                 #viterbiDictInner = dict()
 
                 maxIT = sorted(value.items(), reverse=True, key=lambda x: x[1])[0]
+                maxIT2 = sorted(value.items(), reverse=True, key=lambda x: x[1])[1]
+                print("viterbi", maxIT)
+                
 
-                print("returnDictreturnDictreturnDictreturnDictreturnDictreturnDictreturnDict", maxIT)
+            for key,value in viterbiDict.items():
+                
+                #viterbiMax = highest[1]
+                #highest = 0
+                #viterbiDictInner = dict()
+
+                maxIT = sorted(value.items(), reverse=True, key=lambda x: x[1])[0]
+                maxIT2 = sorted(value.items(), reverse=True, key=lambda x: x[1])[1]
+                
+                print("beam search", maxIT, maxIT2)
 
 
             if(count % 10 == 0):
